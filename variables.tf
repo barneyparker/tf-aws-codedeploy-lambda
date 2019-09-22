@@ -1,7 +1,11 @@
 # CodeDeploy Parameters
-variable "application_name" {}
+variable "application_name" {
+  description = "Application Group Name (must already exist)"
+}
 
-variable "application_group" {}
+variable "application_group" {
+  description = "Name for this deployment group"
+}
 
 variable "deployment_config" {
   description = "pre-defined Application Deployment Config"
@@ -53,4 +57,10 @@ variable "env_vars" {
 variable "aliases" {
   type = "list"
   description = "list of alias names"
+}
+
+variable "policy_arns" {
+  type = "list"
+  description = "List of IAM Policy Arns to attach to this role"
+  default = []
 }
