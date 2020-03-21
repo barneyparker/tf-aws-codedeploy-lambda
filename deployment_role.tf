@@ -1,7 +1,7 @@
 resource "aws_iam_role" "cd_role" {
   count = var.deployment_role_arn == "" ? 1 : 0
 
-  name = "${var.application_name}-${var.application_group}-role"
+  name = "${var.application_name}-${var.application_group}-deployment-role"
 
   assume_role_policy = <<EOF
 {
