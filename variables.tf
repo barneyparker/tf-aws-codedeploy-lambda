@@ -55,12 +55,12 @@ variable "env_vars" {
 }
 
 variable "aliases" {
-  type = "list"
+  type = list
   description = "list of alias names"
 }
 
 variable "policy_arns" {
-  type = "list"
+  type = list
   description = "List of IAM Policy Arns to attach to this role"
   default = []
 }

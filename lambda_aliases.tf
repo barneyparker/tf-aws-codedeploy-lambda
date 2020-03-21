@@ -8,7 +8,7 @@ resource "aws_lambda_alias" "aliases" {
 
   lifecycle {
     ignore_changes = [
-      "function_version"
+      function_version
     ]
   }
 }
